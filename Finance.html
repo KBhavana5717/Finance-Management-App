@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Finance Manager</title>
+  <link rel="stylesheet" href="Styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Personal Finance Manager</h1>
+
+    <div class="budget-section">
+      <label>Set Monthly Budget: ₹<input type="number" id="budgetInput" /></label>
+      <button onclick="setBudget()">Set Budget</button>
+      <p id="budgetDisplay">Budget: ₹0</p>
+      <p id="remainingDisplay">Remaining: ₹0</p>
+    </div>
+
+    <div class="expense-section">
+      <h2>Add Expense</h2>
+      <input type="text" id="desc" placeholder="Description" />
+      <input type="number" id="amount" placeholder="Amount" />
+      <select id="category">
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Bills">Bills</option>
+        <option value="Entertainment">Entertainment</option>
+      </select>
+      <button onclick="addExpense()">Add</button>
+    </div>
+
+    <div class="expense-list">
+      <h3>Expenses</h3>
+      <ul id="expenseList"></ul>
+    </div>
+
+    <canvas id="expenseChart" width="400" height="200"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
